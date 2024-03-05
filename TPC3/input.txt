@@ -3,7 +3,7 @@ Vamos somar algumas sequências de dígitos.
 On
 Aqui está uma sequência: 123
 E agora vamos ver o resultado: =
-E aqui está outra: 456
+E aqui está outra: -456
 Off
 Esta não deve ser somada: 789
 On

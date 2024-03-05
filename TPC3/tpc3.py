@@ -3,7 +3,7 @@ import re
 
 stdin = "\n".join(fileinput.input())
 
-symbols_regex = r'(on|off|=|\d+)'
+symbols_regex = r'(on|off|=|[+-]?\d+)'
 symbols = re.findall(symbols_regex, stdin, flags=re.IGNORECASE)
 
 state = True
@@ -14,7 +14,7 @@ for symbol in symbols:
         state = True
     elif symbol.lower() == 'off':
         state = False
-    elif symbol.isdigit() and state:
-        current += int(symbol)
     elif symbol == '=':
         print(f'Soma: {current}')
+    elif state:
+        current += int(symbol)
