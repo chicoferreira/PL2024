@@ -36,3 +36,6 @@ P = {
         | id                  Lookahead = {id}
 }
 ```
+
+### Verificação de conflitos
+Na gramática a recursividade é sempre à esquerda e não há produções dentro de do mesmo símbolo em que a interseção dos dois lookaheads não seja vazio. Logo não há conflitos LL1.
